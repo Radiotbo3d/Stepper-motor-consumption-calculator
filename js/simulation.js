@@ -44,39 +44,6 @@ export class Simulation {
         });
     }
 
-    initializeChart() {
-        const ctx = document.getElementById(this.chartElementId)?.getContext('2d');
-        if (!ctx) {
-            console.error(`Chart element with ID "${this.chartElementId}" not found.`);
-            return;
-        }
-        // Destroy previous graph if it exists to avoid problems
-
-        if (this.torqueSpeedChart) {
-            this.torqueSpeedChart.destroy();
-        }
-        this.torqueSpeedChart = new Chart(ctx, {
-            type: 'line',
-            data: [],
-            options: {
-                responsive: true,
-                scales: {
-                    x: {
-                        title: { display: true, text: 'Speed (mm/s)', color: '#ABB2BF' },
-                        ticks: { color: '#ABB2BF' }
-                    },
-                    y: {
-                        title: { display: true, text: 'Torque (N-cm)', color: '#ABB2BF' },
-                        ticks: { color: '#ABB2BF' }
-                    }
-                },
-                plugins: {
-                    legend: { labels: { color: '#ABB2BF' } }
-                }
-            }
-        });
-    }
-    
     /**
      * Update the graph with the engines and given parameters.
      * @param {Array<object>} selectedMotors -Motors to simulate.
