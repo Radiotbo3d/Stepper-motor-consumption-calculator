@@ -1,9 +1,7 @@
 # Stepper-motor-consumption-calculator
 An online calculator to find out how many Watts your stepper motor consumes
 # Contributors
-I want to thank everyone who has helped to develop this project.
-
-- [@Alextverdyy](https://github.com/alextverdyy) ([Motors data base](https://github.com/alextverdyy/SMS_Web/blob/main/motors.json))
+- [@Alextverdyy](https://github.com/alextverdyy)
 
 </br>
 And If someone has any suggestion for improving the design or maybe some cool features I could add, please don't hesitate to tell me.
