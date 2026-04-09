@@ -49,3 +49,15 @@ function handleCalculate() {
 function readNum(id) {
     return Number(document.getElementById(id).value);
 }
+
+const inputs = document.querySelectorAll('input[type="number"]');
+
+const check = (input) => {
+    if (!input.validity.valid) input.value = 0;
+    if (+input.value < 0) input.value = 0;
+};
+
+inputs.forEach((input) => {
+    input.addEventListener("input", () => check(input));
+    input.addEventListener("blur", () => check(input));
+});
